@@ -111,8 +111,10 @@ document
 
     // Cambiar images
 
-    document.getElementById("leftImage").src = getRandomImage();
-    document.getElementById("rightImage").src = getRandomImage();
+    const [leftImage, rightImage] = getRandomImages()
+
+    document.getElementById("leftImage").src = leftImage;
+    document.getElementById("rightImage").src = rightImage;
 
     document.getElementById("mensaje").style.display = "block";
   });
@@ -127,12 +129,18 @@ function getRandomPinkColor() {
   return `rgb(${red}, ${green}, ${blue})`;
 }
 
-function getRandomImage() {
-  const imageNames = ["1.jpg", "2.jpg", "3.jpg", "4.jpg"];
-
-  const randomIndex = Math.floor(Math.random() * imageNames.length);
-  const imagePath = "extras/" + imageNames[randomIndex];
-  return imagePath;
+function getRandomImages() {
+  const imageNames = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg", "6.jpg", "7.jpg", "8.jpg", "9.jpg", "10.jpg", "11.jpg", "12.jpg"];
+  // Pick the first image randomly
+  const firstIndex = Math.floor(Math.random() * imageNames.length);
+  const firstImagePath = "extras/" + imageNames[firstIndex];
+  // Pick the second image randomly, ensuring it's different from the first
+  let secondIndex;
+  do {
+      secondIndex = Math.floor(Math.random() * imageNames.length);
+  } while (secondIndex === firstIndex);
+  const secondImagePath = "extras/" + imageNames[secondIndex];
+  return [firstImagePath, secondImagePath];
 }
 
 /*function agregarTransicion() {
