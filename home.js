@@ -104,36 +104,18 @@ document
 
     document.getElementById("mensaje").style.display = "block";
 
-    // Cambiar background color
+    // Cambiar background-color
 
     const nuevoColor = getRandomPinkColor();
-
     document.body.style.backgroundColor = nuevoColor;
+
+    // Cambiar images
+
+    document.getElementById("leftImage").src = getRandomImage();
+    document.getElementById("rightImage").src = getRandomImage();
 
     document.getElementById("mensaje").style.display = "block";
   });
-
-/*document
-  .getElementById("mostrarCancion")
-  .addEventListener("click", function () {
-    console.log("Working");
-    var canciones = ["prueba1", "prueba2", "prueba3"];
-
-    var cancionIndex = Math.floor(Math.random() * canciones.length);
-    var cancionElegida = canciones[cancionIndex];
-
-    document.getElementById("mensaje").innerHTML = cancionElegida;
-
-    document.getElementById("mensaje").style.display = "block";
-
-    // Cambiar background color
-
-    const nuevoColor = getRandomPinkColor();
-
-    document.body.style.backgroundColor = nuevoColor;
-
-    document.getElementById("mensaje").style.display = "block";
-  });*/
 
 function getRandomPinkColor() {
   const minRed = 200;
@@ -143,6 +125,14 @@ function getRandomPinkColor() {
   const red = Math.floor(Math.random() * (maxRed - minRed + 1) + minRed);
 
   return `rgb(${red}, ${green}, ${blue})`;
+}
+
+function getRandomImage() {
+  const imageNames = ["1.jpg", "2.jpg", "3.jpg", "4.jpg"];
+
+  const randomIndex = Math.floor(Math.random() * imageNames.length);
+  const imagePath = "extras/" + imageNames[randomIndex];
+  return imagePath;
 }
 
 /*function agregarTransicion() {

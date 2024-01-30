@@ -9,15 +9,24 @@
         <link rel="stylesheet" href="home.css">
         <link rel="icon" href="extras/heartIcon.png" type="image/x-icon">
         <link rel="shortcut icon" href="extras/heartIcon.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
     </head>
     <body>
-        <div class="center-container">
-            <button id="mostrarMensaje" >Sorpresa</button>
-            <p id="mensaje" class="sinTransicion"></p>
-            <!-- This is a comment within some text  <button id="mostrarCancion">Mostrar canción</button>
-            <p id="cancion"></p> -->
+        <div class="sidebar left-sidebar">
+            <img id="leftImage" src="extras/heartIcon.png" alt="Left picture">
         </div>
-        <div class="bottom-container"></div>
+        <div class="main-content">
+            <header>
+                <h1>Happy Valentine's Day</h1>
+            </header>
+            <div class="center-container">
+                <button id="mostrarMensaje" >Sorpresa</button>
+                <p id="mensaje" class="sinTransicion"></p>
+            </div>
+        </div>
+        <div class="sidebar right-sidebar">
+            <img id="rightImage" src="extras/heartIcon.png" alt="Right picture">
+        </div>
 
         <script src="home.js" async defer></script>
     </body>
