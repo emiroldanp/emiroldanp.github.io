@@ -13,7 +13,7 @@
     </head>
     <body>
         <div class="sidebar left-sidebar">
-            <img id="leftImage" src="extras/heartIcon.png" alt="Left picture">
+            <img id="leftImage" onclick="spinImage(this)" src="extras/heartIcon.png" alt="Left picture">
         </div>
         <div class="main-content">
             <header>
@@ -21,11 +21,11 @@
             </header>
             <div class="center-container">
                 <button id="mostrarMensaje" >Sorpresa</button>
-                <p id="mensaje"></p>
+                <p id="mensaje" ></p>
             </div>
         </div>
         <div class="sidebar right-sidebar">
-            <img id="rightImage" src="extras/heartIcon.png" alt="Right picture">
+            <img id="rightImage" onclick="spinImage(this)" src="extras/heartIcon.png" alt="Right picture">
         </div>
         <script src="home.js" async defer></script>
     </body>

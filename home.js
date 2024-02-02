@@ -170,3 +170,10 @@ function getRandomImages() {
   const secondImagePath = "extras/imgs/" + imageNames[secondIndex];
   return [firstImagePath, secondImagePath];
 }
+
+function spinImage(element) {
+  element.classList.add("clicked");
+  setTimeout(function () {
+    element.classList.remove("clicked");
+  }, 1000); // Adjust the duration (in milliseconds) as needed
+}
