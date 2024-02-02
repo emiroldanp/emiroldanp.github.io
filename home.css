@@ -8,11 +8,6 @@ body {
     font-family: "Roboto", sans-serif;
 }
 
-.main-content {
-    margin: 20px;
-    text-align: center;
-}
-
 header {
     color: #f6f6f6;
     text-align: center;
@@ -25,6 +20,11 @@ header h1 {
     font-weight: 700;
     font-size: 2.5em;    
     text-shadow: 2px 2px 4px rgba(181, 126, 220, 0.5);
+}
+
+.main-content {
+    margin: 20px;
+    text-align: center;
 }
 
 .center-container {
@@ -65,14 +65,6 @@ button:hover {
 #mensaje::after {
     font-size: 36px;
     margin-right: 5px;
-}
-
-.sinTransicion {
-    transition: none;
-}
-
-.conTransicion {
-    transition: all 0.5s ease-in-out;
 }
 
 .sidebar {

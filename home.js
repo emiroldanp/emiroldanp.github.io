@@ -3,7 +3,7 @@
 document
   .getElementById("mostrarMensaje")
   .addEventListener("click", function () {
-    console.log("Working");
+    // Add new messages here
     var mensajes = [
       "Eres la luz que ilumina mis días.",
       "Tu sonrisa es mi razón para ser feliz.",
@@ -101,16 +101,13 @@ document
     var mensajeElegido = mensajes[mensajeIndex];
 
     document.getElementById("mensaje").innerHTML = mensajeElegido;
-
     document.getElementById("mensaje").style.display = "block";
 
-    // Cambiar background-color
-
+    // Change background-color
     const nuevoColor = getRandomPinkColor();
     document.body.style.backgroundColor = nuevoColor;
 
-    // Cambiar images
-
+    // Change images
     const [leftImage, rightImage] = getRandomImages();
 
     document.getElementById("leftImage").src = leftImage;
@@ -118,7 +115,7 @@ document
 
     document.getElementById("mensaje").style.display = "block";
   });
-
+// Change background color function
 function getRandomPinkColor() {
   const minRed = 200;
   const maxRed = 255;
@@ -128,8 +125,9 @@ function getRandomPinkColor() {
 
   return `rgb(${red}, ${green}, ${blue})`;
 }
-
+// Get random images that doesn't repeat function
 function getRandomImages() {
+  // Add new images here
   const imageNames = [
     "1.jpg",
     "2.jpg",
@@ -172,15 +170,3 @@ function getRandomImages() {
   const secondImagePath = "extras/imgs/" + imageNames[secondIndex];
   return [firstImagePath, secondImagePath];
 }
-
-/*function agregarTransicion() {
-  var elemento = document.getElementById("mensaje");
-
-  if (elemento.classList.contains("sinTransicion")) {
-    elemento.classList.remove("sinTransicion");
-    elemento.classList.add("conTransicion");
-  } else {
-    elemento.classList.remove("conTransicion")
-    elemento.classList.add("sinTransicion")
-  }
-}*/
