@@ -109,12 +109,26 @@ document
 
     // Change images
     const [leftImage, rightImage] = getRandomImages();
-
     document.getElementById("leftImage").src = leftImage;
     document.getElementById("rightImage").src = rightImage;
-
     document.getElementById("mensaje").style.display = "block";
+
+    // Set initial opacity to 0
+    document.getElementById("leftImage").style.opacity = 0;
+    document.getElementById("rightImage").style.opacity = 0;
+
+    // Gradually increase opacity over time
+    let opacity = 0;
+    const interval = setInterval(function () {
+      opacity += 0.01;
+      document.getElementById("leftImage").style.opacity = opacity;
+      document.getElementById("rightImage").style.opacity = opacity;
+      if (opacity >= 1) {
+        clearInterval(interval);
+      }
+    }, 10); // Adjust the interval duration to control the speed of the fading effect
   });
+
 // Change background color function
 function getRandomPinkColor() {
   const minRed = 200;
@@ -177,3 +191,4 @@ function spinImage(element) {
     element.classList.remove("clicked");
   }, 1000); // Adjust the duration (in milliseconds) as needed
 }
+
